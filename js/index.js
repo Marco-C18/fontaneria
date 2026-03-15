@@ -62,6 +62,8 @@ function openWhatsApp(message) {
   const encodedMsg = encodeURIComponent(message);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+  window.location.href = `whatsapp://send?phone=${phone}&text=${encodedMsg}`;
+
   if (isMobile) {
     window.location.href = `whatsapp://send?phone=${phone}&text=${encodedMsg}`;
   } else {

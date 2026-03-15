@@ -68,6 +68,7 @@ header .options .group-1 {
 .group-2 {
   background-color: var(--color-primario);
   position: fixed;
+  z-index: 100;
   /* right: 0; */
   height: 100%;
   width: 100%;
