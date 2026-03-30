@@ -17,6 +17,7 @@ a {
   --color-secundario: #3498db;
   --color-acento: #e74c3c;
   --color-header: #000000d3;
+  --max-width-content: 1300px;
 }
 
 body {
@@ -37,11 +38,14 @@ header {
   justify-content: space-between;
   text-align: center;
   transition: 0.3s;
+
+  background: #000000d3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 header.active {
-  background: #000000d3;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  box-shadow: none;
 }
 
 header .logo {
@@ -142,6 +146,7 @@ header .burguer {
   font-size: 1.7rem;
   color: white;
   padding-top: 1rem;
+  cursor: pointer;
 }
 
 header .burguer:hover {
@@ -213,17 +218,14 @@ header .burguer:hover {
   color: var(--color-primario);
   padding: 0.5rem 0.6rem;
   border-radius: 50px;
-
   font-size: larger;
 }
 
 .about {
   width: 100%;
   background-color: white;
-
   padding: 1.5rem;
   text-align: center;
-
   display: flex;
   align-self: center;
   justify-content: center;
@@ -291,12 +293,61 @@ header .burguer:hover {
   border-radius: 0.5rem;
 }
 
+.process {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.all-process {
+  transform: translateX(-200%);
+  transition: all 0.5s ease-in-out;
+}
+
+.process .active {
+  transform: translateX(0%);
+}
+
+.process-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.process-img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
 .services {
   width: 100%;
   background-color: white;
   color: white;
   padding: 1rem;
   text-align: center;
+}
+
+.all-services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-200%);
+  transition: all 0.5s ease-in-out;
+}
+
+.services .active {
+  transform: translateX(0%);
 }
 
 .services .title-box {
@@ -557,6 +608,10 @@ footer {
     max-width: 300px;
   }
 
+  .process-img {
+    max-width: 850px;
+  }
+
   .services-title {
     font-size: 2rem;
   }
@@ -578,7 +633,12 @@ footer {
 }
 
 .all-about {
-  display: none;
+  transform: translateX(-200%);
+  transition: all 0.5s ease-in-out;
+}
+
+.about .active {
+  transform: translateX(0%);
 }
 
 @media (min-width: 980px) {
@@ -616,12 +676,12 @@ footer {
   .all-about {
     height: 100%;
     width: 100%;
-
-    max-width: 1200px;
+    max-width: var(--max-width-content);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
+
   .about-text-box {
     max-width: 500px;
     width: 70%;
@@ -631,25 +691,25 @@ footer {
 
   .about .img-box {
     width: 40%;
-    max-width: 400px;
     height: 100%;
     display: flex;
   }
+
   .about .img-box img {
     width: 100%;
     height: auto;
     object-fit: contain;
   }
 
-  .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .process-img {
+    max-width: var(--max-width-content);
   }
 
   .services-text-box {
+    width: 100%;
     max-width: 1400px;
+    justify-content: space-between;
+    max-width: var(--max-width-content);
   }
 
   .services-text-box .service {

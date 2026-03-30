@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/index.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 
@@ -66,7 +66,10 @@
 
     <!-- Acerca de -->
     <section id="about" class="about">
-        <div class="all-about">
+        <div id="all-about" class="all-about">
+            <div class="img-box">
+                <img src="assets/img/about-font.jpg" alt="about">
+            </div>
             <div class="about-text-box">
                 <p class="title">Por qué elegir este servicio?</p>
                 <p class="about-text">
@@ -91,74 +94,84 @@
                     <p>Busco que cada trabajo quede bien hecho desde la primera vez.</p>
                 </div>
             </div>
-            <div class="img-box">
-                <img src="assets/img/about-font.jpg" alt="about">
+
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <div id="all-process" class="all-process">
+            <div class="process-box">
+                <img id="process-img" src="assets/img/banner-phone.png" alt="Proceso" class="process-img">
             </div>
         </div>
     </section>
 
     <!-- Servicios -->
     <section id="services" class="services">
-        <div class="title-box">
-            <p class="services-title">Servicios</p>
-        </div>
+        <div id="all-services" class="all-services">
 
-        <div class="parraf-box">
-            <p class="services-parraf">Selecciona un servicio para solicitar información o cotizar por WhatsApp.</p>
 
-        </div>
+            <div class="title-box">
+                <p class="services-title">Servicios</p>
+            </div>
 
-        <div class="services-text-box">
-            <a href="#" id="eb" target="_blank" class="service">
-                <div class="icon">
-                    <i class="ri-flashlight-fill"></i>
-                </div>
-                <p class="services-title">
-                    Electricidad
-                </p>
-                <p class="services-text">
-                    Instalaciones y reparaciones eléctricas domiciliarias e industriales.
-                </p>
+            <div class="parraf-box">
+                <p class="services-parraf">Selecciona un servicio para solicitar información o cotizar por WhatsApp.</p>
 
-            </a>
+            </div>
 
-            <a href="#" id="fb" target="_blank" class="service">
-                <div class="icon">
-                    <i class="ri-contrast-drop-fill"></i>
-                </div>
-                <p class="services-title">
-                    Fontanería
-                </p>
-                <p class="services-text">
-                    Solución de fugas, instalaciones y mantenimiento de agua.
-                </p>
-            </a>
+            <div class="services-text-box">
+                <a href="#" id="eb" target="_blank" class="service">
+                    <div class="icon">
+                        <i class="ri-flashlight-fill"></i>
+                    </div>
+                    <p class="services-title">
+                        Electricidad
+                    </p>
+                    <p class="services-text">
+                        Instalaciones y reparaciones eléctricas domiciliarias e industriales.
+                    </p>
 
-            <a href="#" id="ib" target="_blank" class="service">
-                <div class="icon">
-                    <i class="ri-bubble-chart-fill"></i>
-                </div>
-                <p class="services-title">
-                    Instalaciones
-                </p>
-                <p class="services-text">
-                    Montaje de sanitarios y equipos eléctricos.
-                </p>
+                </a>
 
-            </a>
+                <a href="#" id="fb" target="_blank" class="service">
+                    <div class="icon">
+                        <i class="ri-contrast-drop-fill"></i>
+                    </div>
+                    <p class="services-title">
+                        Fontanería
+                    </p>
+                    <p class="services-text">
+                        Solución de fugas, instalaciones y mantenimiento de agua.
+                    </p>
+                </a>
 
-            <a href="#" id="rb" target="_blank" class="service">
-                <div class="icon">
-                    <i class="ri-hammer-fill"></i>
-                </div>
-                <p class="services-title">
-                    Reparaciones generales
-                </p>
-                <p class="services-text">
-                    Lavadoras y mantenimiento técnico del hogar.
-                </p>
+                <a href="#" id="ib" target="_blank" class="service">
+                    <div class="icon">
+                        <i class="ri-bubble-chart-fill"></i>
+                    </div>
+                    <p class="services-title">
+                        Instalaciones
+                    </p>
+                    <p class="services-text">
+                        Montaje de sanitarios y equipos eléctricos.
+                    </p>
 
-            </a>
+                </a>
+
+                <a href="#" id="rb" target="_blank" class="service">
+                    <div class="icon">
+                        <i class="ri-hammer-fill"></i>
+                    </div>
+                    <p class="services-title">
+                        Reparaciones generales
+                    </p>
+                    <p class="services-text">
+                        Lavadoras y mantenimiento técnico del hogar.
+                    </p>
+
+                </a>
+            </div>
         </div>
     </section>
 
@@ -213,7 +226,7 @@
 
                 <div class="footer-contact">
                     <p class="footer-title">Contacto</p>
-                    <a href="wb" target="_blank">
+                    <a id="wb" href="#" target="_blank">
                         <i class="ri-whatsapp-line"></i>
                         WhatsApp
                     </a>
